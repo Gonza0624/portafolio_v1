@@ -1,0 +1,13 @@
+// abstracts
+@use 'scss/abstracts/variables';
+@use 'scss/abstracts/mixin';
+
+// base
+@use 'scss/base/reset';
+@use 'scss/base/base';
+
+// navigation bar
+@use 'scss/components/navbar';
+
+// section 1
+@use 'scss/components/section_1';
