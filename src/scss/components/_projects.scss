@@ -1,0 +1,160 @@
+@use "../abstracts/mixin";
+
+.projects {
+  background-color: #ffffff0c;
+}
+
+.projects__title h1 {
+  color: #ffffff0c;
+  font-weight: 700;
+  text-align: left;
+  font-size: 9rem;
+  letter-spacing: 25px;
+}
+
+// card
+:root {
+  --red: #ea5353;
+  --cyan: #2bcedf;
+  --orange: #fbaf08;
+  --blue: #549ef2;
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.header {
+  text-align: center;
+  line-height: 0.8;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.header p {
+  margin: 0 auto;
+  line-height: 2;
+  color: var(--grayishBlue);
+}
+
+.box p {
+  color: var(--grayishBlue);
+}
+
+.box {
+  border-radius: 5px;
+  // box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  padding: 30px;
+  margin: 40px;
+  background-color: #f5f5f5;
+}
+
+.card__img {
+  float: right;
+  width: 50px;
+  margin: 10px;
+  transition: all .45s ease-in-out;
+  // width: 100%;
+  z-index: 1;
+}
+
+.card__img:hover {
+  transform: scale(1.2) translate(0px);
+}
+
+@media (max-width: 450px) {
+  .box {
+    height: 200px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+  .box {
+    text-align: center;
+    height: 180px;
+  }
+}
+
+.cyan {
+  border-top: 4px solid var(--cyan);
+}
+.red {
+  border-top: 4px solid var(--red);
+}
+.blue {
+  border-top: 4px solid var(--blue);
+}
+.orange {
+  border-top: 4px solid var(--orange);
+}
+
+h2 {
+  color: var(--varyDarkBlue);
+  font-weight: var(--weight3);
+}
+
+@media (min-width: 950px) {
+  .row1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-down {
+    position: relative;
+    top: 150px;
+  }
+  .box {
+    width: 20%;
+  }
+  .header p {
+    width: 30%;
+  }
+}
+
+.repo__btn1 {
+  @include mixin.main-button(#ffffff42);
+  width: 50%;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: #2bcedf;
+}
+
+.repo__btn2 {
+  @include mixin.main-button(#ffffff42);
+  width: 50%;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: #549ef2;
+}
+
+.repo__btn3 {
+  @include mixin.main-button(#ffffff42);
+  width: 50%;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: #ea5353;
+}
+
+.repo__btn4 {
+  @include mixin.main-button(#ffffff42);
+  width: 50%;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: #fbaf08;
+}

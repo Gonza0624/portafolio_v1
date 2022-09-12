@@ -1,0 +1,72 @@
+@use "../abstracts/mixin";
+
+.home {
+  padding-left: 50px;
+  display: flex;
+  height: 92vh;
+  background-color: #1d1c24;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 40px;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 3rem;
+    padding: 10px 0px;
+  }
+
+  &__span {
+    color: #2bcedf;
+  }
+
+  &__p {
+    margin: 20px 0px;
+    font-size: 1.3rem;
+    color: #fff;
+  }
+
+  &__btn {
+    @include mixin.main-button(#ffffff42);
+    border: none;
+    color: black;
+    background-color: #2bcedf;
+
+    &--mod {
+      @include mixin.main-button(#2bcedf);
+      border: 1px solid #2bcedf;
+      color: #2bcedf;
+      background-color: #1d1c24;
+    }
+  }
+
+
+
+  &__img {
+    // background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    overflow: hidden;
+    img {
+      object-fit: contain;
+      width: 600px;
+      height: 600px;
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  &__line {
+    border: 0;
+    height: 2px;
+    margin: 3px 0px;
+    background-image: linear-gradient(to right, #2bcedf, #2bcedf, #2bcedf);
+  }
+}

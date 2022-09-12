@@ -1,11 +1,13 @@
 .nav {
-  background-color: white;
+  background-color: #1d1c24;
   padding: 10px;
+  position: relative;
 
   &__menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-top: 5px;
 
     @media (--min-sm) {
       flex-direction: row;
@@ -20,13 +22,39 @@
     }
   }
 
+  &__logo {
+    margin-left: 150px;
+    font-size: 1.2rem;
+    margin-right: auto;
+    color: #fff;
+    display: flex;
+
+    img {
+      width: 50px;
+      height: 50px;
+      float: left;
+    }
+
+    h1 {
+      flex-direction: column;
+      color: #2bcedf;
+    }
+  }
+
+  &__li--btn{
+    border: none;
+    background-color: #2bcedf;
+    pointer-events: none;
+    border-radius: 5px;
+  }
+
   &__menu a {
-    margin: 10px 30px;
+    margin: 5px 25px;
     position: relative;
     display: inline-block;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 300;
-    color: rgb(33, 30, 30);
+    color: rgb(255, 255, 255);
     transition: color 0.2s ease;
 
     &:hover {
@@ -51,12 +79,12 @@
 
     &::before {
       transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
-      background: #9836f4;
+      background: #f9ae07;
     }
 
     &::after {
       transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-      background: #9836f4;
+      background: #2bcedf;
     }
   }
 }

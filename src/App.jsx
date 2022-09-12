@@ -1,11 +1,21 @@
-import { Navbar } from "./components/navbar/navbar";
-import { Section1 } from "./components/section_1/section_1";
+import { Navbar } from "./components/myNavbar/navbar";
+import { Home } from "./components/myHome/home";
+import { Projects } from "./components/myProjects/projects";
+import { Skills } from "./components/mySkills/skills";
+import { Form } from "./components/myForm/form";
+import { About } from "./components/aboutMe/aboutMe";
+import { Footer } from "./components/footer/footer";
 
-function App() {
+const App = () => {
   return (
     <>
       <Navbar />
-      <Section1 />
+      <Home />
+      <About />
+      <Skills />
+      <Projects />
+      <Form />
+      <Footer />
     </>
   );
 }
