@@ -1,10 +1,11 @@
 @use "../abstracts/mixin";
+@use "../abstracts/variables";
 
 .home {
   padding-left: 50px;
   display: flex;
   height: 92vh;
-  background-color: #1d1c24;
+  background-color: variables.$dark;
 
   &__content {
     display: flex;
@@ -15,39 +16,35 @@
   }
 
   &__title {
-    color: #fff;
+    color: variables.$white;
     font-size: 3rem;
     padding: 10px 0px;
   }
 
   &__span {
-    color: #2bcedf;
+    color: variables.$blue;
   }
 
   &__p {
     margin: 20px 0px;
     font-size: 1.3rem;
-    color: #fff;
+    color: variables.$white;
   }
 
   &__btn {
-    @include mixin.main-button(#ffffff42);
-    border: none;
-    color: black;
-    background-color: #2bcedf;
+    @include mixin.main-button(variables.$dark);
+    border: 1px solid variables.$blue;
+    background-color: variables.$blue;
 
     &--mod {
-      @include mixin.main-button(#2bcedf);
-      border: 1px solid #2bcedf;
-      color: #2bcedf;
-      background-color: #1d1c24;
+      @include mixin.main-button(variables.$blue);
+      border: 1px solid variables.$blue;
+      color: variables.$blue;
+      background-color: variables.$dark;
     }
   }
 
-
-
   &__img {
-    // background-color: beige;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +64,6 @@
     border: 0;
     height: 2px;
     margin: 3px 0px;
-    background-image: linear-gradient(to right, #2bcedf, #2bcedf, #2bcedf);
+    background-image: linear-gradient(to right, variables.$blue, variables.$blue, variables.$blue);
   }
 }

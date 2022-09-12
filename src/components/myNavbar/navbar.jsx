@@ -1,9 +1,5 @@
 import icon1 from "../../assets/icon1.svg";
 
-const estilosBtn = {
-  color: "black",
-};
-
 export const Navbar = () => (
   <nav class="nav">
     <ul class="nav__menu">
@@ -21,9 +17,7 @@ export const Navbar = () => (
         <a href="#">About me</a>
       </li>
       <li className="nav__li">
-        <a href="#">
-          Projects
-        </a>
+        <a href="#">Projects</a>
       </li>
       <li className="nav__li">
         <a href="#">Contact</a>

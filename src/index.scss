@@ -1,28 +1,28 @@
 // abstracts
-@use 'scss/abstracts/variables';
-@use 'scss/abstracts/mixin';
+@use "scss/abstracts/variables";
+@use "scss/abstracts/mixin";
 
 // base
-@use 'scss/base/reset';
-@use 'scss/base/base';
+@use "scss/base/reset";
+@use "scss/base/base";
 
 // navigation bar
-@use 'scss/components/navbar';
+@use "scss/components/navbar";
 
 // this is the home page
-@use 'scss/components/home';
+@use "scss/components/home";
 
 // about
-@use 'scss/components/about.scss';
+@use "scss/components/about.scss";
 
 // section of my projects
-@use 'scss/components/projects';
+@use "scss/components/projects";
 
 // section of my skills
-@use 'scss/components/skills';
+@use "scss/components/skills";
 
 // form
-@use 'scss/components/form';
+@use "scss/components/form";
 
 // section footer
-@use 'scss/components/footer.scss';
+@use "scss/components/footer.scss";

@@ -5,7 +5,8 @@ export const Home = () => {
     <section className="home">
       <div className="home__content">
         <h1 className="home__title">
-          Hello, <span className="home__span">im Gonzalo</span>, front end developer
+          Hello, <span className="home__span">im Gonzalo</span>, front end
+          developer
           <hr className="home__line" />
         </h1>
         <p className="home__p">
