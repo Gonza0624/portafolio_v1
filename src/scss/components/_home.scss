@@ -4,14 +4,19 @@
 .home {
   padding-left: 50px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin: 20px;
   height: 92vh;
   background-color: variables.$dark;
 
   &__content {
     display: flex;
     justify-content: center;
+    align-items: center;
+    // background-color: bisque;
     width: 70%;
-    margin: 40px;
+    // margin: 10px;
     flex-direction: column;
   }
 
@@ -45,6 +50,8 @@
   }
 
   &__img {
+    // background-color: bisque;
+    margin-right: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,10 +67,23 @@
     }
   }
 
+  &__container-btn {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
   &__line {
     border: 0;
     height: 2px;
     margin: 3px 0px;
-    background-image: linear-gradient(to right, variables.$blue, variables.$blue, variables.$blue);
+    background-image: linear-gradient(
+      to right,
+      variables.$blue,
+      variables.$blue,
+      variables.$blue
+    );
   }
 }

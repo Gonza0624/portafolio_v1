@@ -1,4 +1,5 @@
-import img from "../../assets/img2.png";
+// import img from "../../assets/img2.png";
+import img2 from "../../assets/robot.svg";
 
 export const Home = () => {
   return (
@@ -14,13 +15,13 @@ export const Home = () => {
           laboriosam explicabo maxime veniam aut officia reiciendis aspernatur
           numquam architecto
         </p>
-        <div>
+        <div className="home__container-btn">
           <button className="home__btn">My projects</button>
           <button className="home__btn--mod">My projects</button>
         </div>
       </div>
       <figure className="home__img">
-        <img src={img} alt="" />
+        <img src={img2} alt="" />
       </figure>
     </section>
   );

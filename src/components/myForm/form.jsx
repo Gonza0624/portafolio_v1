@@ -1,5 +1,3 @@
-import img1 from "../../assets/img-form.svg";
-
 export const Form = () => {
   return (
     <section className="section-form">
