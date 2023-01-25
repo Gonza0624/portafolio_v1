@@ -4,27 +4,29 @@
   background-color: variables.$dark-light;
 
   &__footer {
-    padding: 30px 0px;
-    font-family: "Play", sans-serif;
+    padding: 15px 0px;
     text-align: center;
   }
 
   &__footer &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     margin: 1% 0%;
-    padding: 0.6% 0%;
-    color: variables.$blue;
+    color: variables.$white;
     font-size: 0.8em;
   }
 
   &__footer &__row a {
+    margin: 8px;
     text-decoration: none;
-    color: variables.$blue;
+    color: variables.$white;
     transition: 0.5s;
   }
 
   &__footer &__row a:hover {
-    color: variables.$white;
+    color: variables.$blue;
   }
 
   &__footer &__row ul {
@@ -44,15 +46,6 @@
 
 @media (max-width: 720px) {
   .section-main__footer {
-    text-align: left;
-    padding: 5%;
-  }
-  .section-main__footer .section-main__row ul li {
-    display: block;
-    margin: 10px 0px;
-    text-align: left;
-  }
-  .section-main__footer .section-main__row a i {
-    margin: 0% 3%;
+    padding: 3%;
   }
 }

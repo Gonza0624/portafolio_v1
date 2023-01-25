@@ -1,8 +1,35 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  -moz-box-sizing: border-box;
+  outline: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 li {
@@ -13,15 +40,32 @@ a {
   text-decoration: none;
 }
 
-/* ===== Scrollbar CSS ===== */
+fieldset {
+  border: none;
+}
 
-/* Firefox */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+// Scrollbar ------
+
 * {
   scrollbar-width: thin;
   scrollbar-color: #00bdbd #ffffff;
 }
 
-/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 16px;
 }

@@ -1,54 +1,88 @@
-import logo from "../../assets/logo.svg";
-import React, { useState, useEffect } from "react";
+import logo from "../../assets/logo3.png";
+import React, { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-scroll";
 
 export const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [click, setClick] = useState(false);
 
-  const toggleNav = () => {
-    setToggleMenu(!toggleMenu);
-  };
-
-  useEffect(() => {
-    const changeWidth = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", changeWidth);
-
-    return () => {
-      window.removeEventListener("resize", changeWidth);
-    };
-  }, []);
+  const handleClick = () => setClick(!click);
 
   return (
-    <nav className="nav">
-      {(toggleMenu || screenWidth > 500) && (
-        <ul className="nav__menu">
+    <>
+      <nav className="nav" onClick={(e) => e.stopPropagation()}>
+        <div className="nav__container">
           <div className="nav__logo">
             <img src={logo} alt="" />
             <div>
-              <h1>Portfolio</h1>
-              <h5>Gonzalo</h5>
+              <h1>Gonza</h1>
+              <h5>Software Developer</h5>
             </div>
           </div>
-          <li className="nav__li">
-            <a href="#">Home</a>
-          </li>
-          <li className="nav__li">
-            <a href="#">About me</a>
-          </li>
-          <li className="nav__li">
-            <a href="#">Projects</a>
-          </li>
-          <li className="nav__li">
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      )}
-      <button onClick={toggleNav} className="btn">
-        +
-      </button>
-    </nav>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-64}
+                duration={500}
+              >
+                Skills
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-65}
+                duration={500}
+              >
+                About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-60}
+                duration={500}
+              >
+                Projects
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+          <div className="nav__icon" onClick={handleClick}>
+            <div>
+              <GiHamburgerMenu />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };

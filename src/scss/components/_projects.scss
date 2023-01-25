@@ -19,11 +19,33 @@
   padding: 10px;
 
   &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  &__title h1 {
     color: variables.$dark-light;
     font-weight: 700;
-    text-align: center;
-    font-size: 8rem;
-    padding-bottom: 20px;
+    font-size: 9rem;
+    @media screen and (max-width: 800px) {
+      & {
+        font-size: 7rem;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      & {
+        font-size: 5rem;
+      }
+    }
+    @media screen and (max-width: 430px) {
+      & {
+        font-size: 4.5rem;
+      }
+    }
   }
 
   &__gallery {
@@ -52,7 +74,7 @@
     img {
       width: 100%;
       max-width: 100%;
-      height: auto;
+      height: 225px;
       background-size: contain;
     }
 
@@ -149,7 +171,7 @@
 
 @media (max-width: 991px) {
   .projects__gallery .projects__card {
-    width: 49%;
+    width: 60%;
   }
 }
 

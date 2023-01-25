@@ -2,68 +2,82 @@
 @use "../abstracts/variables";
 
 .home {
-  padding-left: 50px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  // margin: 20px;
-  height: 92vh;
-  background-color: variables.$dark;
+  height: 100%;
+  width: 100%;
+  @media screen and (max-width: 800px) {
+    & {
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
 
   &__content {
     display: flex;
+    margin-left: 40px;
     justify-content: center;
-    align-items: center;
-    // background-color: bisque;
     width: 70%;
-    // margin: 10px;
     flex-direction: column;
+    @media screen and (max-width: 800px) {
+      & {
+        margin-top: 80px;
+        margin-left: 0px;
+        width: 100%;
+      }
+    }
   }
 
   &__title {
     color: variables.$white;
     font-size: 3rem;
-    padding: 10px 0px;
+    @media screen and (max-width: 950px) {
+      & {
+        font-size: 2.5rem;
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 410px) {
+      & {
+        font-size: 2rem;
+        width: 100%;
+      }
+    }
   }
 
   &__span {
     color: variables.$blue;
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 16ch;
+
+    animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
   }
 
   &__p {
     margin: 20px 0px;
     font-size: 1.3rem;
     color: variables.$white;
-  }
-
-  &__btn {
-    @include mixin.main-button(variables.$dark);
-    border: 1px solid variables.$blue;
-    background-color: variables.$blue;
-
-    &--mod {
-      @include mixin.main-button(variables.$blue);
-      border: 1px solid variables.$blue;
-      color: variables.$blue;
-      background-color: variables.$dark;
-    }
-  }
-
-  &__img {
-    // background-color: bisque;
-    margin-right: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    overflow: hidden;
-    img {
-      object-fit: contain;
-      width: 600px;
-      height: 600px;
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
+    @media screen and (max-width: 950px) {
+      & {
+        font-size: 1.1rem;
+      }
     }
   }
 
@@ -71,11 +85,50 @@
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    width: 60%;
+    @media screen and (max-width: 500px) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+
+  &__btn {
+    @include mixin.main-button(variables.$blue);
+    border: 1px solid variables.$blue;
+    color: variables.$blue;
+    background-color: variables.$dark;
+    display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    .icon-btn {
+      margin-left: 10px;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__img {
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    overflow: hidden;
+    @media screen and (max-width: 800px) {
+      & {
+        margin-right: 0px;
+        width: 100%;
+      }
+    }
+    img {
+      margin: 0 auto;
+      max-width: 100%;
+    }
   }
 
   &__line {
+    width: 90%;
     border: 0;
     height: 2px;
     margin: 3px 0px;

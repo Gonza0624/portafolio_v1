@@ -3,7 +3,8 @@
 
 .section-form {
   background-color: variables.$dark;
-  height: 110vh;
+  height: 100%;
+  width: 100%;
 
   &__flex {
     display: flex;
@@ -13,20 +14,49 @@
 
   &__form {
     padding: 50px;
-    width: 65%;
+    width: 50%;
+    @media screen and (max-width: 800px) {
+      & {
+        width: 80%;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  &__title h1 {
     color: variables.$dark-light;
     font-weight: 700;
-    font-size: 8rem;
-    padding-bottom: 20px;
+    font-size: 9rem;
+    @media screen and (max-width: 800px) {
+      & {
+        font-size: 7rem;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      & {
+        font-size: 5rem;
+      }
+    }
   }
 
   &__form {
     input,
     textarea {
       background-color: variables.$dark-light;
+      color: white;
       width: 100%;
       border-radius: 5px;
       padding: 10px;
@@ -42,10 +72,12 @@
   }
 
   &__btn {
-    @include mixin.main-button(variables.$dark);
+    @include mixin.main-button(variables.$blue);
     border: 1px solid variables.$blue;
-    color: variables.$white;
-    background-color: variables.$blue;
-    width: 50%;
+    color: variables.$blue;
+    background-color: variables.$dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
