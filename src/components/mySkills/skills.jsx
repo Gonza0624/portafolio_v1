@@ -33,16 +33,8 @@ export const Skills = () => {
             <h4>Javascript</h4>
           </div>
           <div class="skills__my-skill">
-            <img className="skills__img" src={typeScript} />
-            <h4>TypeScript</h4>
-          </div>
-          <div class="skills__my-skill">
             <img className="skills__img" src={react} />
             <h4>React JS</h4>
-          </div>
-          <div class="skills__my-skill">
-            <img className="skills__img" src={ReactN} />
-            <h4>React Native</h4>
           </div>
           <div class="skills__my-skill">
             <img className="skills__img" src={sass} />
